@@ -174,8 +174,10 @@ a {
   padding-top: 1rem;
 }
 .video-section video {
+  display: block;
   width: 100%;       /* fluid video */
-  max-width: 800px;
+  max-width: 360px;  /* the intro video is a portrait (phone) recording, so keep it narrow */
+  margin: 0 auto;
   height: auto;
   background-color: var(--navy);
   border-radius: 8px;
