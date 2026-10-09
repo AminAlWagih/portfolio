@@ -68,13 +68,15 @@ GitHub Pages has no server, so after valid input the form shows a thank-you mess
 
 ## Testing and validation
 
-Record your results here after running each tool:
+All checks were run on the live GitHub Pages site on October 9, 2026.
 
-- [ ] HTML: W3C Markup Validator (http://validator.w3.org/) - result: 
-- [ ] CSS: W3C CSS Validator (http://jigsaw.w3.org/css-validator/) - result: 
-- [ ] Links: W3C Link Checker (http://validator.w3.org/checklink) - result: 
-- [ ] Spelling: tool used and result: 
-- [ ] Accessibility: WAVE (http://wave.webaim.org/) - result: 
+| Check | Tool | Result |
+|-------|------|--------|
+| HTML | W3C Markup Validator, Nu Html Checker (https://validator.w3.org/nu/) | All four pages (`index`, `about`, `projects`, `contact`): no errors or warnings |
+| CSS | W3C CSS Validator, CSS level 3 + SVG (https://jigsaw.w3.org/css-validator/) | All four files (`style`, `mobile`, `tablet`, `laptop`): 0 errors, 0 warnings. A first run showed one warning in `mobile.css` because it used a CSS variable defined in another file; I replaced it with the hex colour, and it now passes |
+| Links | W3C Link Checker, recursive (https://validator.w3.org/checklink) | 9 documents checked, no broken links. The only items listed are the `mailto:` email links, which the tool does not check |
+| Spelling | LanguageTool, English (Canada) (https://languagetool.org) | No misspellings. It only flagged proper nouns and acronyms that are correct (Al-Wagih, ERPsim, BUSI, LANs, WANs). I accepted its one comma suggestion on the Contact page |
+| Accessibility | WAVE (https://wave.webaim.org/) | All four pages: 0 errors, 0 contrast errors, AIM score 10 out of 10. The About page shows 2 alerts, which are WAVE's standard reminder to provide captions or a transcript for an HTML5 video |
 
 ## Sources and citations
 
