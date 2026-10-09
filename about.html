@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Me | Amin Al-Wagih Portfolio</title>
+  <meta name="description" content="About Amin Al-Wagih, with a short introduction video.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 767px)">
+  <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width: 768px) and (max-width: 1023px)">
+  <link rel="stylesheet" href="css/laptop.css" media="screen and (min-width: 1024px)">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <h1 class="logo">Amin Al-Wagih</h1>
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h2>About Me</h2>
+
+    <article class="about clearfix">
+      <figure class="profile-photo">
+        <img src="images/profile.jpg" alt="Portrait of Amin Al-Wagih" width="400" height="400">
+        <figcaption>Amin Al-Wagih</figcaption>
+      </figure>
+      <div class="about-text">
+        <h3>Hello!</h3>
+        <p>My name is Amin. I am a Technology Management (IT) student at Ontario Tech University, and my roots are in Yemen and Ethiopia. Outside of class I love playing soccer, playing video games, and hanging out with friends.</p>
+        <p>After graduating, I plan to find a good job in IT and build a family of my own. This portfolio shows some of the work I have done along the way.</p>
+      </div>
+    </article>
+
+    <section class="video-section" aria-labelledby="video-heading">
+      <h3 id="video-heading">Watch my introduction</h3>
+      <!-- HTML5 video: controls shows the player buttons, poster is the preview image.
+           The video must be 45-60 seconds long and of you. -->
+      <video controls poster="images/poster.jpg" preload="metadata">
+        <source src="media/intro.mp4" type="video/mp4">
+        <p>Your browser does not support HTML5 video. <a href="media/intro.mp4">Download the video</a> instead.</p>
+      </video>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Contact: <a href="mailto:amin.alwagih@ontariotechu.net">amin.alwagih@ontariotechu.net</a></p>
+    <p>&copy; 2026 Amin Al-Wagih. All rights reserved.</p>
+  </footer>
+</body>
+</html>
