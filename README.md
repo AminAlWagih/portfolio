@@ -42,7 +42,9 @@ The layout uses percentage widths, fluid images, and floats. **Flexbox is not us
 
 ## Colour scheme
 
-Created with Adobe Color (https://color.adobe.com/create). Scheme name: **Navy and Teal** (replace with the name you saved).
+I built the palette in Adobe Color's palette generator (https://color.adobe.com/create) by entering my five chosen colours, and named it **Navy and Teal Portfolio**. The palette was not saved to an Adobe account library, so the screenshot below is the record of it.
+
+![Adobe Color palette: Navy and Teal Portfolio](images/adobe-color-palette.jpg)
 
 | Role | Name | Hex |
 |------|------|-----|
@@ -52,7 +54,7 @@ Created with Adobe Color (https://color.adobe.com/create). Scheme name: **Navy a
 | Accent, buttons, card borders | Teal | `#5BC0BE` |
 | Page background | Mist | `#F4F7FA` |
 
-The dark navy tones keep text readable on light backgrounds, and teal is used sparingly for emphasis. Text and background pairings were chosen for strong contrast to pass WAVE.
+These colours are defined once as CSS variables at the top of `css/style.css` and used on every page. The dark navy tones keep text readable on light backgrounds, and teal is used sparingly for emphasis. Text and background pairings were chosen for strong contrast to pass WAVE.
 
 ## Form validation
 
