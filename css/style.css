@@ -1,0 +1,240 @@
+/* ==========================================================
+   style.css - shared styles for every page and every viewport
+   Colour scheme (Adobe Color, see README):
+     Deep Navy  #0B132B   Midnight #1C2541   Steel Blue #3A506B
+     Teal       #5BC0BE   Mist     #F4F7FA
+   Layout uses fluid widths (percentages) and floats only.
+   Flexbox is NOT used anywhere in this project.
+   ========================================================== */
+
+/* Colour variables so the scheme is defined in one place */
+:root {
+  --navy: #0B132B;
+  --midnight: #1C2541;
+  --steel: #3A506B;
+  --teal: #5BC0BE;
+  --mist: #F4F7FA;
+}
+
+* {
+  box-sizing: border-box; /* padding is included in widths, which keeps percentage layouts predictable */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--navy);
+  background-color: var(--mist);
+}
+
+/* Clearfix: makes a container wrap around its floated children */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Skip link for keyboard and screen-reader users (accessibility) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: var(--teal);
+  color: var(--navy);
+  padding: 0.5rem 1rem;
+  z-index: 10;
+}
+
+/* ---------- Header and navigation ---------- */
+/* Horizontal linear gradient (to right) on the header */
+.site-header {
+  background: linear-gradient(to right, var(--navy), var(--steel));
+  color: #ffffff;
+  padding: 1rem 5%;
+  overflow: hidden; /* contains the floated nav */
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  display: inline-block; /* places links in a row without flexbox */
+}
+
+.nav-list a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-list a:hover,
+.nav-list a:focus,
+.nav-list a[aria-current="page"] {
+  border-bottom-color: var(--teal);
+}
+
+/* ---------- Main content ---------- */
+main {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 0 2rem;
+}
+
+h2, h3 {
+  color: var(--midnight);
+}
+
+a {
+  color: var(--steel);
+}
+
+/* Angled linear gradient (135deg) on the home page hero banner */
+.hero {
+  background: linear-gradient(135deg, var(--midnight) 0%, var(--steel) 55%, var(--teal) 100%);
+  color: #ffffff;
+  padding: 3rem 5%;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+.hero h2 {
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--teal);
+  color: var(--navy);
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover,
+.button:focus {
+  background-color: var(--navy);
+  color: #ffffff;
+}
+
+/* ---------- Cards (home page and projects page) ---------- */
+.card {
+  float: left;
+  width: 100%;           /* overridden in the viewport CSS files */
+  background-color: #ffffff;
+  border-top: 5px solid var(--teal);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(11, 19, 43, 0.15);
+}
+.card h3 {
+  margin-top: 0;
+}
+
+/* ---------- About page ---------- */
+.profile-photo {
+  float: left;
+  width: 100%;
+  margin: 0 0 1rem;
+}
+.profile-photo img {
+  width: 100%;       /* fluid image */
+  height: auto;
+  border-radius: 8px;
+}
+.profile-photo figcaption {
+  text-align: center;
+  font-style: italic;
+}
+.about-text {
+  float: left;
+  width: 100%;
+}
+
+.video-section {
+  clear: both;
+  padding-top: 1rem;
+}
+.video-section video {
+  width: 100%;       /* fluid video */
+  max-width: 800px;
+  height: auto;
+  background-color: var(--navy);
+  border-radius: 8px;
+}
+
+/* ---------- Contact form ---------- */
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(11, 19, 43, 0.15);
+}
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 2px solid var(--steel);
+  border-radius: 4px;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 3px solid var(--teal);
+}
+.contact-form input.invalid,
+.contact-form textarea.invalid {
+  border-color: #9b1c1c;
+}
+.error {
+  display: block;
+  color: #9b1c1c; /* dark red keeps good contrast on white */
+  font-size: 0.9rem;
+  min-height: 1.2rem;
+}
+.status {
+  color: #14532d;
+  font-weight: bold;
+}
+
+/* ---------- Footer ---------- */
+/* Angled gradient (45deg) on the footer */
+.site-footer {
+  background: linear-gradient(45deg, var(--navy), var(--midnight) 60%, var(--steel));
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 5%;
+  clear: both;
+}
+.site-footer p {
+  margin: 0.3rem 0;
+}
+.site-footer a {
+  color: var(--teal);
+}
