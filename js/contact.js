@@ -3,7 +3,7 @@
 // this script reads the browser's validity state and shows friendly messages.
 
 var form = document.getElementById("contact-form");
-var status = document.getElementById("form-status");
+var formStatus = document.getElementById("form-status"); // not named "status": that clashes with window.status
 
 // Friendly error text for each field when it is invalid
 var messages = {
@@ -16,7 +16,9 @@ var messages = {
 // Check one field and show or clear its message
 function checkField(field) {
   var errorBox = document.getElementById(field.id + "-error");
-  if (field.validity.valid) {
+  // The browser only checks minlength on typed input, so we check the length here too
+  var longEnough = !(field.minLength > 0 && field.value.length < field.minLength);
+  if (field.validity.valid && longEnough) {
     errorBox.textContent = "";
     field.classList.remove("invalid");
     field.removeAttribute("aria-invalid");
@@ -40,7 +42,7 @@ for (var i = 0; i < fields.length; i++) {
 // On submit, check every field; only continue if all are valid
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // no server exists on GitHub Pages, so we stop the real submit
-  status.textContent = "";
+  formStatus.textContent = "";
 
   var allValid = true;
   var firstBad = null;
@@ -54,7 +56,7 @@ form.addEventListener("submit", function (event) {
   }
 
   if (allValid) {
-    status.textContent = "Thank you! Your message has been received.";
+    formStatus.textContent = "Thank you! Your message has been received.";
     form.reset();
   } else {
     firstBad.focus(); // move keyboard focus to the first problem
