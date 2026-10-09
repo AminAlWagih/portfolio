@@ -1,0 +1,38 @@
+/* ==========================================================
+   mobile.css - phones, loaded only when width is 767px or less
+   Single column layout: everything stacks and uses the full width.
+   ========================================================== */
+
+.site-header {
+  text-align: center;
+}
+
+/* Nav links become a stacked list of full-width tap targets */
+.nav-list li {
+  display: block;
+}
+.nav-list a {
+  padding: 0.8rem 1rem; /* large touch target */
+  border-bottom: 1px solid var(--steel);
+}
+
+.hero {
+  padding: 2rem 5%;
+}
+.hero h2 {
+  font-size: 1.5rem;
+}
+
+/* One card per row */
+.card {
+  width: 100%;
+}
+
+.profile-photo {
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.about-text {
+  width: 100%;
+}

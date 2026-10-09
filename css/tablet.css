@@ -1,0 +1,31 @@
+/* ==========================================================
+   tablet.css - loaded only when width is 768px to 1023px
+   Two column layout using percentage widths and floats.
+   ========================================================== */
+
+.site-header {
+  text-align: center;
+}
+
+/* Nav links sit in a centred row */
+.nav-list {
+  text-align: center;
+}
+
+/* Two cards per row: 48% + 48% + 4% of gutter */
+.card {
+  width: 48%;
+  margin-right: 4%;
+}
+.card:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+/* Photo on the left, text on the right */
+.profile-photo {
+  width: 35%;
+  margin-right: 5%;
+}
+.about-text {
+  width: 60%;
+}

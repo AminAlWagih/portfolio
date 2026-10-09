@@ -1,0 +1,37 @@
+/* ==========================================================
+   laptop.css - loaded only when width is 1024px or more
+   Three column layout using percentage widths and floats.
+   ========================================================== */
+
+/* Logo on the left, nav on the right (float instead of flexbox) */
+.logo {
+  float: left;
+}
+.nav-list {
+  float: right;
+}
+
+/* Three cards per row: 31% x 3 + 3.5% x 2 gutters = 100% */
+.card {
+  width: 31%;
+  margin-right: 3.5%;
+}
+.card:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+/* Photo on the left, text on the right */
+.profile-photo {
+  width: 30%;
+  margin-right: 5%;
+}
+.about-text {
+  width: 65%;
+}
+
+.hero {
+  padding: 4rem 5%;
+}
+.hero h2 {
+  font-size: 2.2rem;
+}
