@@ -1,8 +1,8 @@
 # Personal Portfolio - INFR3120 Assignment 1
 
 **Author:** Amin Al-Wagih
-**Live site (GitHub Pages):** https://YOUR-USERNAME.github.io/YOUR-REPO/
-**Repository:** https://github.com/YOUR-USERNAME/YOUR-REPO
+**Live site (GitHub Pages):** https://aminalwagih.github.io/portfolio/
+**Repository:** https://github.com/AminAlWagih/portfolio
 
 A four page portfolio built with HTML5 and CSS3: Home, About Me, Projects, and Contact Me. It is a multi-page site (four separate HTML files), not a single page application.
 
