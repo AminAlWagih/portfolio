@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Me | Amin Al-Wagih Portfolio</title>
+  <meta name="description" content="Send a message to Amin Al-Wagih using the contact form.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 767px)">
+  <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width: 768px) and (max-width: 1023px)">
+  <link rel="stylesheet" href="css/laptop.css" media="screen and (min-width: 1024px)">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <h1 class="logo">Amin Al-Wagih</h1>
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" aria-current="page">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h2>Contact Me</h2>
+    <p>Fill out the form below and I will get back to you. All fields are required.</p>
+
+    <!-- novalidate lets contact.js show custom messages; the HTML5 rules (required, type, pattern) still apply -->
+    <form id="contact-form" class="contact-form" action="#" method="post" novalidate>
+      <p>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required minlength="2" maxlength="60"
+               pattern="[A-Za-z][A-Za-z' \-]+" autocomplete="name"
+               aria-describedby="name-error">
+        <span class="error" id="name-error" role="alert"></span>
+      </p>
+      <p>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email"
+               pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}"
+               aria-describedby="email-error">
+        <span class="error" id="email-error" role="alert"></span>
+      </p>
+      <p>
+        <label for="phone">Cell No.</label>
+        <input type="tel" id="phone" name="phone" required placeholder="905-555-1234"
+               pattern="\(?[0-9]{3}\)?[\- .]?[0-9]{3}[\- .]?[0-9]{4}" autocomplete="tel"
+               aria-describedby="phone-error">
+        <span class="error" id="phone-error" role="alert"></span>
+      </p>
+      <p>
+        <label for="comments">Comments</label>
+        <textarea id="comments" name="comments" rows="5" required minlength="10" maxlength="500"
+                  aria-describedby="comments-error"></textarea>
+        <span class="error" id="comments-error" role="alert"></span>
+      </p>
+      <p>
+        <button type="submit" class="button">Submit</button>
+      </p>
+      <p id="form-status" class="status" role="status"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>Contact: <a href="mailto:amin.alwagih@ontariotechu.net">amin.alwagih@ontariotechu.net</a></p>
+    <p>&copy; 2026 Amin Al-Wagih. All rights reserved.</p>
+  </footer>
+
+  <script src="js/contact.js"></script>
+</body>
+</html>
