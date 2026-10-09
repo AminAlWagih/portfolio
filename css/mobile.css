@@ -13,7 +13,7 @@
 }
 .nav-list a {
   padding: 0.8rem 1rem; /* large touch target */
-  border-bottom: 1px solid var(--steel);
+  border-bottom: 1px solid #3A506B; /* Steel Blue from the colour scheme */
 }
 
 .hero {
