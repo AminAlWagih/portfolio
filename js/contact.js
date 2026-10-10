@@ -1,6 +1,7 @@
 // contact.js - validates the contact form before "sending" it.
 // The HTML attributes (required, type, pattern, minlength) define the rules;
 // this script reads the browser's validity state and shows friendly messages.
+// GitHub Pages is static hosting, so valid input shows a thank-you message and is not sent anywhere.
 
 var form = document.getElementById("contact-form");
 var formStatus = document.getElementById("form-status"); // not named "status": that clashes with window.status
